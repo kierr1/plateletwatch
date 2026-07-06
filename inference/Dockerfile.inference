@@ -1,0 +1,19 @@
+# Dockerfile for the PlateletWatch ONNX inference service.
+# Build context should be the folder containing this file, inference_server.py,
+# requirements.txt, and the two .onnx model files.
+
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY inference_server.py .
+COPY plateletwatch.onnx .
+COPY bloodcellwatch.onnx .
+
+ENV PORT=8000
+EXPOSE 8000
+
+CMD ["python", "inference_server.py"]

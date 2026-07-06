@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PlateletWatch — Dengue Early Detection</title>
+  <meta name="description"
+    content="A microscope-integrated web application supporting early dengue detection through platelet count analysis from blood samples." />
+  <link rel="stylesheet" href="design-tokens.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a href="#hero-main" class="skip-link">Skip to content</a>
+
+  <!-- NAVBAR -->
+  <header class="site-nav">
+    <a href="/" class="brand" aria-label="PlateletWatch home">
+      <span class="brand-mark">
+        <img src="pics/pic2.png" alt="" />
+      </span>
+      <span class="brand-text">
+        <span class="brand-name"><strong>Platelet</strong>Watch</span>
+        <span class="brand-sub">Dengue Early Detection</span>
+      </span>
+    </a>
+    <nav class="nav-actions" aria-label="Primary">
+      <a href="/signin" class="btn btn-ghost">Sign in</a>
+      <a href="/register" class="btn btn-accent">Get started</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <main id="hero-main" class="hero">
+    <div class="hero-grid">
+
+      <!-- Left: copy -->
+      <section class="hero-copy reveal">
+        <span class="eyebrow">
+          <span class="eyebrow-dot" aria-hidden="true"></span>
+          Microscope-integrated screening
+        </span>
+
+        <h1 class="hero-headline">
+          Monitor platelets.<br />
+          Detect risks <em>early.</em>
+        </h1>
+
+        <p class="hero-lede">
+          A microscope-integrated web application that supports early dengue
+          detection through platelet count analysis from blood samples.
+        </p>
+
+        <div class="hero-cta">
+          <a href="/signin" class="btn btn-accent btn-lg">
+            Get started
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h9M8.5 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a href="#features" class="btn btn-quiet btn-lg">See how it works</a>
+        </div>
+
+        <ul class="hero-stats" aria-label="At a glance">
+          <li><span class="stat-num">&lt;15s</span><span class="stat-label">Per-frame analysis</span></li>
+          <li><span class="stat-num">4-tier</span><span class="stat-label">Risk stratification</span></li>
+          <li><span class="stat-num">Secure</span><span class="stat-label">Encrypted records</span></li>
+        </ul>
+      </section>
+
+      <!-- Right: visual -->
+      <aside class="hero-visual reveal" aria-hidden="true">
+        <div class="hero-figure">
+          <img src="pics/pic1.png" alt="" class="hero-cells" />
+          <div class="hero-figure-glow"></div>
+        </div>
+        <div class="float-card float-card-a">
+          <span class="fc-dot fc-dot-ok"></span>
+          <div>
+            <span class="fc-label">Platelet count</span>
+            <span class="fc-value">182 ×10³/µL</span>
+          </div>
+        </div>
+        <div class="float-card float-card-b">
+          <span class="fc-dot fc-dot-warn"></span>
+          <div>
+            <span class="fc-label">Risk status</span>
+            <span class="fc-value">Monitoring</span>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- FEATURE CARDS -->
+  <section id="features" class="features">
+    <div class="section-head reveal">
+      <span class="eyebrow eyebrow-quiet">What it does</span>
+      <h2 class="section-title-lg">Built for confident, early decisions</h2>
+      <p class="section-intro">
+        Every part of the workflow — from capture to report — is designed to
+        keep clinicians fast, informed, and in control.
+      </p>
+    </div>
+
+    <ul class="feature-grid">
+      <li class="feature-card reveal">
+        <span class="feature-ico" data-tone="accent">
+          <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M3 11h3l2 5 4-12 2 7h5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+        <h3>Real-time platelet tracking</h3>
+        <p>Live counts from microscope frames, charted over each session so trends surface immediately.</p>
+      </li>
+      <li class="feature-card reveal">
+        <span class="feature-ico" data-tone="warning">
+          <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M11 3 2.5 18h17L11 3z" stroke-linejoin="round" />
+            <path d="M11 9v4M11 15.6v.2" stroke-linecap="round" />
+          </svg>
+        </span>
+        <h3>Automated risk stratification</h3>
+        <p>Counts are mapped to clear four-tier dengue risk bands, with thresholds you can review at a glance.</p>
+      </li>
+      <li class="feature-card reveal">
+        <span class="feature-ico" data-tone="teal">
+          <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <circle cx="11" cy="11" r="8" />
+            <circle cx="11" cy="11" r="3" />
+            <path d="M15 7l3-3" stroke-linecap="round" />
+          </svg>
+        </span>
+        <h3>AI-assisted blood analysis</h3>
+        <p>Image models help identify and count platelets in smears, reducing manual effort and variability.</p>
+      </li>
+      <li class="feature-card reveal">
+        <span class="feature-ico" data-tone="blue">
+          <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M11 3 4 6v5c0 4 3 6.5 7 8 4-1.5 7-4 7-8V6l-7-3z" stroke-linejoin="round" />
+            <path d="M8 11l2 2 4-4" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+        <h3>Secure patient records</h3>
+        <p>Patient data is encrypted and access-controlled — and is never sold or shared.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- DISCLAIMER / FOOTER -->
+  <footer class="site-footer">
+    <div class="disclaimer">
+      <span class="disclaimer-ico" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+            stroke-linejoin="round" />
+          <line x1="12" y1="9" x2="12" y2="13" stroke-linecap="round" />
+          <line x1="12" y1="17" x2="12.01" y2="17" stroke-linecap="round" />
+        </svg>
+      </span>
+      <p>
+        <strong>Disclaimer:</strong> This system is intended for early screening and
+        detection purposes only. It does not replace professional medical diagnosis,
+        treatment, or consultation. Please seek advice from a licensed healthcare professional.
+      </p>
+    </div>
+    <div class="footer-base">
+      <span>© <span id="year">2026</span> PlateletWatch</span>
+      <span class="footer-links">
+        <a href="/signin">Sign in</a>
+        <a href="/register">Register</a>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    /* Scroll-reveal — progressive, respects reduced-motion */
+    (function () {
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window) ||
+          window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        els.forEach(function (el) { el.classList.add('visible'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      els.forEach(function (el, i) {
+        el.style.transitionDelay = Math.min(i * 60, 240) + 'ms';
+        io.observe(el);
+      });
+    })();
+  </script>
+</body>
+
+</html>

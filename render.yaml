@@ -1,0 +1,41 @@
+# Render Blueprint — deploys both services from one repo.
+# Push this repo to GitHub, then in Render: New -> Blueprint -> select repo.
+# Repo layout expected:
+#   /web/            <- server.js, package.json, index.html, styles.css, etc.
+#   /inference/       <- inference_server.py, requirements.txt, Dockerfile,
+#                        plateletwatch.pt, bloodcellwatch.pt
+#   render.yaml       <- this file, at repo root
+
+services:
+  # ── Node.js frontend + API ──────────────────────────────────────────
+  - type: web
+    name: plateletwatch-web
+    runtime: node
+    rootDir: web
+    buildCommand: npm install
+    startCommand: npm start
+    plan: starter          # 512MB is plenty for the Node app alone
+    envVars:
+      - key: OPENROUTER_API_KEY
+        sync: false         # set manually in Render dashboard (secret)
+      - key: SITE_URL
+        value: https://plateletwatch-web.onrender.com
+      - key: INFERENCE_URL
+        value: https://plateletwatch-inference.onrender.com
+
+  # ── Python ONNX inference service ───────────────────────────────────
+  - type: web
+    name: plateletwatch-inference
+    runtime: docker
+    rootDir: inference
+    dockerfilePath: ./Dockerfile.inference
+    dockerContext: .
+    plan: starter           # onnxruntime is light — 512MB should be enough;
+                            # bump to standard only if you see OOM restarts
+    envVars:
+      - key: ALLOWED_ORIGINS
+        value: https://plateletwatch-web.onrender.com
+      - key: MODEL_IMGSZ
+        value: "640"        # these .onnx models were exported at 640x640
+      - key: DEFAULT_ZOOM
+        value: "40x"
